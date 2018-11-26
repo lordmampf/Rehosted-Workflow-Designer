@@ -71,7 +71,7 @@ namespace RehostedWorkflowDesigner.CSharpExpressionEditor
                     asm = System.Reflection.Assembly.Load(assembly);
                 }
                 catch (Exception ex) {
-                    //Console.WriteLine(ex.ToString());
+                    Console.WriteLine(ex.ToString());
                 }
                 if(asm != null)
                     if(File.Exists(asm.Location))

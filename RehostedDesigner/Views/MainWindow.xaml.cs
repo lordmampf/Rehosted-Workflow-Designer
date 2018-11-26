@@ -102,7 +102,7 @@ namespace RehostedWorkflowDesigner.Views
                 //load dependency
                 AppDomain.CurrentDomain.Load("Twilio.Api");
                 // load Custom Activity Libraries into current domain
-                //AppDomain.CurrentDomain.Load("MeetupActivityLibrary");
+                AppDomain.CurrentDomain.Load("MeetupActivityLibrary");
                 // load System Activity Libraries into current domain; uncomment more if libraries below available on your system
                 AppDomain.CurrentDomain.Load("System.Activities");
                 AppDomain.CurrentDomain.Load("System.ServiceModel.Activities");
@@ -158,7 +158,7 @@ namespace RehostedWorkflowDesigner.Views
                                     select
                                         new ToolboxItemWrapper(activityType);
 
-                    actvities.ToList().ForEach(wfToolboxCategory.Add);                    
+                    actvities.ToList().ForEach(wfToolboxCategory.Add);
 
                     if (wfToolboxCategory.Tools.Count > 0)
                     {
@@ -181,7 +181,7 @@ namespace RehostedWorkflowDesigner.Views
                 LabelStatusBar.Content = String.Format("Loaded Activities: {0}", activitiesCount.ToString());
                 WfToolboxBorder.Child = _wfToolbox;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -205,7 +205,7 @@ namespace RehostedWorkflowDesigner.Views
                     consoleOutput.Dispatcher.Invoke(
                         System.Windows.Threading.DispatcherPriority.Normal,
                         new Action(
-                            delegate()
+                            delegate ()
                             {
                                 consoleOutput.Text += String.Format("[{0}] {1}" + Environment.NewLine, item.Key, item.Value);
                             }
@@ -283,7 +283,7 @@ namespace RehostedWorkflowDesigner.Views
                 if (dialogSave.ShowDialog() == true)
                 {
                     CustomWfDesigner.Instance.Save(dialogSave.FileName);
-                        _currentWorkflowFile = dialogSave.FileName;                
+                    _currentWorkflowFile = dialogSave.FileName;
                 }
             }
             else
@@ -332,7 +332,7 @@ namespace RehostedWorkflowDesigner.Views
         /// Loads a Workflow into a new Workflow Designer instance
         /// </summary>
         private void CmdWorkflowOpen(object sender, ExecutedRoutedEventArgs e)
-        {            
+        {
             var dialogOpen = new OpenFileDialog();
             dialogOpen.Title = "Open Workflow";
             dialogOpen.Filter = "Workflows (.xaml)|*.xaml";

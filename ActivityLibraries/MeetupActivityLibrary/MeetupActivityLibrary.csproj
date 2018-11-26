@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MeetupWfIntro.MeetupActivityLibrary</RootNamespace>
     <AssemblyName>MeetupActivityLibrary</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -140,6 +141,9 @@
     <Compile Include="Activities\Meetup\GetGroupMembers.cs" />
     <Compile Include="Activities\Meetup\GetRSVPmembers.cs" />
     <Compile Include="Activities\Misc\ShowMessageBox.cs" />
+    <Compile Include="Activities\Presentation\Customer.cs" />
+    <Compile Include="Activities\Presentation\ReadCustomerXmlActivity.cs" />
+    <Compile Include="Activities\Presentation\ReadCustomerJsonActivity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
